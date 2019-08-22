@@ -62,9 +62,9 @@
     console.time('fetching data')
     fetch('https://swapi.co/api/people/1')
     .then(res => res.json())
-    .then(inf => {
+    .then(data => {
       console.timeEnd('fetching data')
-      console.log(inf)
+      console.log(data)
     })
     
 
