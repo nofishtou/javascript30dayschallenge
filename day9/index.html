@@ -17,29 +17,56 @@
       p.style.fontSize = '50px';
     }
 
-    // Regular
+      // Regular
+      console.log('hello')
+
+     
 
     // Interpolated
-
+      console.log('Hello I am a %s string!', '💩');
     // Styled
-
+    // console.log('%c I am some great text', 'font-size:50px; background:red; text-shadow: 10px 10px 0 blue')
     // warning!
-
+      console.warn('smth')
     // Error :|
-
+      console.error('SHIT!')
     // Info
-
+      console.info(':o')
+  
     // Testing
-
+      const p = document.querySelector('p')
+      console.assert(p.classList.contains('ouch'), 'hm :(')
     // clearing
-
+      console.clear()
     // Viewing DOM Elements
-
+      console.log(p)
+      console.dir(p)
     // Grouping together
-
+      dogs.forEach( item => {
+        console.group(`${item.name}`)
+        console.log(`Dog name is ${item.name}`)
+        console.log(`${item.name}s age is ${item.age} years`)
+        console.log(`${item.name}s age is ${item.age * 7} dog years`)
+        console.groupEnd(`${item.name}`)
+      })
     // counting
-
+      console.count('smth')
+      console.count('anyth')
+      console.count('smth')
+      console.count('smth')
+      console.count('smth')
+      console.count('anyth')
+      console.count('smth')
+      console.count('smth')
     // timing
+    console.time('fetching data')
+    fetch('https://swapi.co/api/people/1')
+    .then(res => res.json())
+    .then(data => {
+      console.timeEnd('fetching data')
+      console.log(data)
+    })
+    
 
   </script>
 </body>
