@@ -10,13 +10,11 @@
   const pressed = []
   const secretcode = 'andrew'
   window.addEventListener('keyup', (e) => {
-    console.log(e.key)
     pressed.push(e.key);
     pressed.splice(-secretcode.length - 1, pressed.length - secretcode.length)
     if(pressed.join('').includes(secretcode)){
       console.log('you did it!')
     }
-    console.log(pressed)
   })
 </script>
 </body>
