@@ -40,7 +40,7 @@
 
   function populateVoices() {
     voices = this.getVoices();
-    
+
     voicesDropdown.innerHTML = voices
       .map(voices => `<option value="${voices.name}">${voices.name} (${voices.lang})</option>`)
       .join('');
@@ -69,8 +69,6 @@
   options.forEach(option => option.addEventListener('change', changeOption));
   speakButton.addEventListener('click', toggle);
   stopButton.addEventListener('click', () => toggle(false))
-
-
 </script>
 </body>
 </html>
